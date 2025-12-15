@@ -48,13 +48,13 @@ export default function SortingBoard() {
           New Array
         </button>
 
-        {/* <input
+        <input
           type="range"
           min="1"
           max="20"
           value={speed}
           onChange={(e) => setSpeed(Number(e.target.value))}
-        /> */}
+        />
       </div>
 
       <div className="bars-container">
