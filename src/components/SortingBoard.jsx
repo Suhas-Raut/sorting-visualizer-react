@@ -4,6 +4,8 @@ import { generateArray } from "../utils/generateArray";
 import { bubbleSort } from "../algorithms/bubbleSort";
 import { selectionSort } from "../algorithms/selectionSort";
 import { insertionSort } from "../algorithms/insertionSort";
+import { mergeSort } from "../algorithms/mergeSort";
+import { quickSort } from "../algorithms/quickSort";
 import { animateSort } from "../utils/animateSort";
 import "../styles/sorting.css";
 
@@ -41,6 +43,8 @@ export default function SortingBoard() {
           <option value="bubble">Bubble Sort</option>
           <option value="selection">Selection Sort</option>
           <option value="insertion">Insertion Sort</option>
+          <option value="merge">Merge Sort</option>
+          <option value="quick">Quick Sort</option>
         </select>
 
         <button onClick={runSort}>Visualize</button>
