@@ -12,6 +12,16 @@
 
 ## ✨ Features
 
+### Snapshots -
+- User Interface
+- <img align="center" src="https://github.com/Suhas-Raut/pathfinding-visualizer-react/blob/main/public/assets/UI1.png" alt="UI1" >
+
+- Animation
+- <img align="center" src="https://github.com/Suhas-Raut/pathfinding-visualizer-react/blob/main/public/assets/UI2.png" alt="UI2" >
+
+- Algorithm Pathfinding Visualization
+- <img align="center" src="https://github.com/Suhas-Raut/pathfinding-visualizer-react/blob/main/public/assets/UI3.png" alt="UI3" >
+
 - 🔁 **Multiple Sorting Algorithms**
   - Bubble Sort
   - Selection Sort
