@@ -1,44 +1,43 @@
 export function mergeSort(arr) {
   const animations = [];
-  const aux = arr.slice();
-
-  mergeSortHelper(arr, 0, arr.length - 1, aux, animations);
+  const a = arr.slice();
+  mergeSortHelper(a, 0, a.length - 1, animations);
   return animations;
 }
 
-function mergeSortHelper(main, start, end, aux, animations) {
-  if (start >= end) return;
+function mergeSortHelper(a, l, r, animations) {
+  if (l >= r) return;
 
-  const mid = Math.floor((start + end) / 2);
-  mergeSortHelper(aux, start, mid, main, animations);
-  mergeSortHelper(aux, mid + 1, end, main, animations);
-  merge(main, start, mid, end, aux, animations);
+  const m = Math.floor((l + r) / 2);
+  mergeSortHelper(a, l, m, animations);
+  mergeSortHelper(a, m + 1, r, animations);
+  mergeInPlace(a, l, m, r, animations);
 }
 
-function merge(main, start, mid, end, aux, animations) {
-  let i = start;
-  let j = mid + 1;
-  let k = start;
+function mergeInPlace(a, l, m, r, animations) {
+  let i = l;
+  let j = m + 1;
 
-  while (i <= mid && j <= end) {
+  while (i <= m && j <= r) {
     animations.push([i, j, false]); // compare
 
-    if (aux[i] <= aux[j]) {
-      animations.push([k, aux[i], true]); // overwrite
-      main[k++] = aux[i++];
+    if (a[i] <= a[j]) {
+      i++;
     } else {
-      animations.push([k, aux[j], true]);
-      main[k++] = aux[j++];
+      // shift instead of overwrite
+      let value = a[j];
+      let index = j;
+
+      while (index > i) {
+        animations.push([index, index - 1, true]);
+        a[index] = a[index - 1];
+        index--;
+      }
+
+      a[i] = value;
+      i++;
+      m++;
+      j++;
     }
-  }
-
-  while (i <= mid) {
-    animations.push([k, aux[i], true]);
-    main[k++] = aux[i++];
-  }
-
-  while (j <= end) {
-    animations.push([k, aux[j], true]);
-    main[k++] = aux[j++];
   }
 }
