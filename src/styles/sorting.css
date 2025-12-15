@@ -110,3 +110,93 @@ input[type="range"] {
     opacity: 1;
   }
 }
+/* 🌫️ Glass base for controls */
+.controls button,
+.controls select,
+.controls input[type="range"] {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  border-radius: 14px;
+
+  color: cyan;
+  font-weight: 600;
+
+  box-shadow:
+    0 8px 32px rgba(10, 48, 236, 0.15),
+    inset 0 0 10px rgba(0, 255, 255, 0.2);
+
+  transition: all 0.3s ease;
+}
+
+/* 🟢 Buttons specifically */
+.controls button {
+  cursor: pointer;
+  text-shadow: 0 0 0px cyan;
+}
+
+/* ✨ Hover glow */
+.controls button:hover,
+.controls select:hover {
+  background: rgba(0, 255, 255, 0.15);
+  box-shadow:
+    0 0 10px rgb(246, 254, 28),
+    inset 0 0 2px rgba(25, 255, 251, 0.4);
+  color: rgb(255, 255, 255);
+}
+
+/* 🔵 Active click */
+.controls button:active {
+  transform: scale(0.96);
+  box-shadow:
+    0 0 10px cyan inset;
+}
+
+/* 🎚️ Slider */
+.controls input[type="range"] {
+  accent-color: cyan;
+  height: 6px;
+}
+
+/* 🧊 Glass panel container 
+.controls {
+  padding: 1px 1px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+}
+*/
+/* 🧊 Fix dropdown glass background */
+.controls select {
+  bbackground: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  border-radius: 14px;
+
+  color: cyan;
+  font-weight: 600;
+
+  box-shadow:
+    0 8px 32px rgba(10, 48, 236, 0.15),
+    inset 0 0 10px rgba(0, 255, 255, 0.2);
+
+  transition: all 0.3s ease;
+}
+
+/* 🟢 Dropdown list (options) */
+.controls select option {
+  background: #0b0b0b;      /* dark background */
+  color: cyan;             /* visible text */
+}
+
+/* 🔥 Hovered / selected option */
+.controls select option:hover,
+.controls select option:checked {
+  background: rgba(0, 255, 255, 0.25);
+  color: black;
+}
