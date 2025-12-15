@@ -5,6 +5,11 @@
 
 ---
 
+## ✨ Live Demo 
+ <a href="https://suhas-raut.github.io/sorting-visualizer-react/" target="_blank" rel="noreferrer"> <img src="https://github.com/Suhas-Raut/sorting-visualizer-react/blob/main/public/image.svg" alt="Live" width="180" height="150"/> </a> 
+ 
+---
+
 ## ✨ Features
 
 - 🔁 **Multiple Sorting Algorithms**
@@ -36,7 +41,16 @@
 
 ---
 
-## 🛠️ Tech Stack
+<h2 align="left">
+  🛠️ Tech Stack&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML5" width="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS3" width="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="32"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" width="40"/>
+  <img src='https://media1.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e47x2g034i9pzwtzzsd3xgg2w9nr94t4tflbbgo3008&rid=giphy.gif' height='32px'> 
+</h2>
+
+
 
 - **React.js** – UI and state management  
 - **JavaScript (ES6+)** – Sorting logic & animations  
