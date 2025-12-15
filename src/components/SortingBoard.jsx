@@ -27,6 +27,10 @@ export default function SortingBoard() {
       animations = selectionSort([...array]);
     else if (algorithm === "insertion")
       animations = insertionSort([...array]);
+    else if (algorithm === "merge")
+      animations = mergeSort([...array]); 
+    else if (algorithm === "quick")
+      animations = quickSort([...array]);
 
     animateSort(animations, setArray, speed);
   };

@@ -1,27 +1,33 @@
 export function quickSort(arr) {
   const animations = [];
+  quickSortHelper(arr, 0, arr.length - 1, animations);
+  return animations;
+}
 
-  function qs(l, r) {
-    if (l >= r) return;
-    let pivot = arr[r].value;
-    let i = l;
+function quickSortHelper(a, low, high, animations) {
+  if (low < high) {
+    const pi = partition(a, low, high, animations);
+    quickSortHelper(a, low, pi - 1, animations);
+    quickSortHelper(a, pi + 1, high, animations);
+  }
+}
 
-    for (let j = l; j < r; j++) {
-      animations.push({ type: "compare", i: j, j: r });
-      if (arr[j].value < pivot) {
-        animations.push({ type: "swap", i, j });
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-        i++;
-      }
+function partition(a, low, high, animations) {
+  const pivot = a[high];
+  let i = low;
+
+  for (let j = low; j < high; j++) {
+    animations.push([j, high, false]); // compare
+
+    if (a[j] < pivot) {
+      animations.push([i, j, true]); // swap
+      [a[i], a[j]] = [a[j], a[i]];
+      i++;
     }
-    animations.push({ type: "swap", i, j: r });
-    [arr[i], arr[r]] = [arr[r], arr[i]];
-
-    qs(l, i - 1);
-    qs(i + 1, r);
   }
 
-  qs(0, arr.length - 1);
-  animations.push({ type: "final" });
-  return animations;
+  animations.push([i, high, true]); // pivot swap
+  [a[i], a[high]] = [a[high], a[i]];
+
+  return i;
 }
