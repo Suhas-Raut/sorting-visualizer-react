@@ -14,13 +14,13 @@
 
 ### Snapshots -
 - User Interface
-- <img align="center" src="https://github.com/Suhas-Raut/pathfinding-visualizer-react/blob/main/public/assets/UI1.png" alt="UI1" >
+- <img align="center" src="https://github.com/Suhas-Raut/sorting-visualizer-react/blob/main/public/S1.png" alt="UI1" >
 
-- Animation
-- <img align="center" src="https://github.com/Suhas-Raut/pathfinding-visualizer-react/blob/main/public/assets/UI2.png" alt="UI2" >
+- Animation while Sorting
+- <img align="center" src="https://github.com/Suhas-Raut/sorting-visualizer-react/blob/main/public/S2.png" alt="UI2" >
 
-- Algorithm Pathfinding Visualization
-- <img align="center" src="https://github.com/Suhas-Raut/pathfinding-visualizer-react/blob/main/public/assets/UI3.png" alt="UI3" >
+- Sorted Algorithm Visualization
+- <img align="center" src="https://github.com/Suhas-Raut/sorting-visualizer-react/blob/main/public/S3.png" alt="UI3" >
 
 - 🔁 **Multiple Sorting Algorithms**
   - Bubble Sort
