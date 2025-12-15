@@ -1,7 +1,7 @@
-export default function Bar({ value }) {
+export default function Bar({ value, state }) {
   return (
     <div
-      className="bar"
+      className={`bar ${state}`}
       style={{ height: `${value}px` }}
     />
   );

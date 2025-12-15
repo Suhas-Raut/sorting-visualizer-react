@@ -12,32 +12,34 @@ import "../styles/sorting.css";
 export default function SortingBoard() {
   const [array, setArray] = useState([]);
   const [algorithm, setAlgorithm] = useState("bubble");
-  const [speed, setSpeed] = useState(5); // 🔥 FAST
+  const [speed, setSpeed] = useState(5);
 
   useEffect(() => {
     setArray(generateArray(60));
   }, []);
 
   const runSort = () => {
+    // 👇 extract ONLY values for algorithm
+    const values = array.map(bar => bar.value);
     let animations = [];
 
     if (algorithm === "bubble")
-      animations = bubbleSort([...array]);
+      animations = bubbleSort(values);
     else if (algorithm === "selection")
-      animations = selectionSort([...array]);
+      animations = selectionSort(values);
     else if (algorithm === "insertion")
-      animations = insertionSort([...array]);
+      animations = insertionSort(values);
     else if (algorithm === "merge")
-      animations = mergeSort([...array]); 
+      animations = mergeSort(values);
     else if (algorithm === "quick")
-      animations = quickSort([...array]);
+      animations = quickSort(values);
 
     animateSort(animations, setArray, speed);
   };
 
   return (
     <div className="sorting-root">
-      <h1>Sorting Visualizer</h1>
+      <h1>SORTING VISUALIZER</h1>
 
       <div className="controls">
         <select
@@ -66,8 +68,12 @@ export default function SortingBoard() {
       </div>
 
       <div className="bars-container">
-        {array.map((value, idx) => (
-          <Bar key={idx} value={value} />
+        {array.map((bar, idx) => (
+          <Bar
+            key={idx}
+            value={bar.value}
+            state={bar.state}   // 🔥 THIS enables colors
+          />
         ))}
       </div>
     </div>

@@ -3,7 +3,16 @@ body {
   color: cyan;
   text-align: center;
 }
-
+h1{
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: cyan;
+  text-shadow:
+    0 0 10px rgba(132, 181, 255, 0.8),
+    0 0 05px rgba(12, 97, 157, 0.6);
+  letter-spacing: 2px;
+}
 .sorting-root {
   padding: 20px;
 }
@@ -48,4 +57,56 @@ select, button, input {
 
 input[type="range"] {
   accent-color: cyan;
+}
+.bar.compare {
+  background: #7f29ff;
+  box-shadow: 0 0 14px #7f29ff;
+  animation: comparePulse 0.4s ease-out;
+}
+
+@keyframes comparePulse {
+  0% {
+    transform: scaleY(0.4);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scaleY(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.bar.swap {
+  background: #ff3355;
+  box-shadow: 0 0 18px #ff3355;
+  animation: swapWave 0.35s ease-in-out;
+}
+
+@keyframes swapWave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.bar.sorted {
+  background: #00ff88;
+  box-shadow: 0 0 20px #00ff88;
+  animation: sortedGlow 0.6s ease-out forwards;
+}
+
+@keyframes sortedGlow {
+  0% {
+    transform: scaleY(0.5);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
 }
